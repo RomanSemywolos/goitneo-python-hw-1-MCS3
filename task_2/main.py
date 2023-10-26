@@ -2,13 +2,13 @@ def parse_input(user_input):
     norm_str = user_input.strip().lower()
     if norm_str.startswith("phone username"):
         cmd = "phone username"
-        user_input_res = user_input[14:].strip()
+        user_input_res = user_input.strip()[14:]
     elif norm_str.startswith("add username phone"):
         cmd = "add username phone"
-        user_input_res = user_input[18:].strip()
+        user_input_res = user_input.strip()[18:]
     elif norm_str.startswith("change username phone"):
         cmd = "change username phone"
-        user_input_res = user_input[21:].strip()
+        user_input_res = user_input.strip()[21:]
     else:
         cmd, *args = user_input.split()
         cmd = cmd.strip().lower()
